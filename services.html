@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | THE CAPITAL APPAREL</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .filters { text-align: center; margin-bottom: 40px; }
+        .filters button {
+            background: var(--black);
+            color: var(--white);
+            border: none;
+            padding: 12px 25px;
+            margin: 0 8px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .filters button:hover, .filters button.active { background: var(--gold); color: var(--black); }
+        
+        .gallery-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px; 
+        }
+        .gallery-item { 
+            background: var(--white); 
+            border-radius: 4px;
+            overflow: hidden;
+            transition: 0.3s;
+            border: 1px solid #eee;
+        }
+        .gallery-item:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
+        .gallery-item img { 
+            width: 100%; 
+            height: 420px; 
+            object-fit: cover; 
+            background: #f5f5f5;
+        }
+        .product-info { padding: 20px; text-align: center; }
+        .product-info h3 { font-size: 1.1em; margin-bottom: 5px; letter-spacing: 1.5px; }
+        .product-info p { color: #666; font-size: 0.9em; }
+        .price { color: var(--gold); font-weight: bold; font-size: 1.3em; margin-top: 10px; }
+        .tag { display: inline-block; background: var(--black); color: var(--white); font-size: 0.7em; padding: 4px 10px; margin-bottom: 8px; font-weight: bold; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.jpeg" alt="THE CAPITAL APPAREL Logo" style="height: 55px;">
+            </a>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="enqueries.html">Enqueries</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>Collection Gallery</h1>
+
+        <div class="filters">
+            <button class="active">All</button>
+            <button>Men</button>
+            <button>Women</button>
+            <button>Unisex</button>
+        </div>
+
+        <div class="gallery-grid">
+            
+            <!-- 1. MENS ACE OF JACARANDA -->
+            <div class="gallery-item">
+                <img src="images/ace-jacaranda-tee.jpeg" alt="Mens Ace of Jacaranda Tee">
+                <div class="product-info">
+                    <h3>ACE OF JACARANDA TEE</h3>
+                    <p>Men's Premium Cotton T-Shirt | Black</p>
+                    <p class="price">R 450.00</p>
+                </div>
+            </div>
+
+            <!-- 2. WOMENS BOSS LOGO TEE -->
+            <div class="gallery-item">
+                <img src="images/womens-logo-tee.jpeg" alt="Womens Wear Like A Boss Tee">
+                <div class="product-info">
+                    <span class="tag">NEW DROP</span>
+                    <h3>WEAR LIKE A BOSS TEE</h3>
+                    <p>Women's Classic Fit Graphic Tee | White</p>
+                    <p class="price">R 350.00</p>
+                </div>
+            </div>
+
+            <!-- 3. MENS BOSS TEE -->
+            <div class="gallery-item">
+                <img src="images/boss-tee-womens.jpeg" alt="Mens Wear Like A Boss Tee">
+                <img src="images/boss-tee-mens.jpeg" alt="Womens Wear Like A Boss Tee">
+                <div class="product-info">
+                    <span class="tag">NEW DROP</span>
+                    <h3>WEAR LIKE A BOSS TEE</h3>
+                    <p>Men's Oversized Graphic Tee | White</p>
+                    <p class="price">R 250.00</p>
+                </div>
+            </div>
+
+            <!-- 4. UNISEX ESSENTIAL LOGO TEE -->
+            <div class="gallery-item">
+                <img src="images/mini-logo-tee.jpeg" alt="Unisex Essential Logo Tee">
+                <div class="product-info">
+                    <h3>ESSENTIAL LOGO TEE</h3>
+                    <p>Unisex Minimal Chest Logo Tee | Black</p>
+                    <p class="price">R 300.00</p>
+                </div>
+            </div>
+
+            <!-- 5. UNISEX CAPITAL HOODIE -->
+            <div class="gallery-item">
+                <img src="images/hoodie-front.jpeg" alt="Capital Signature Hoodie">
+                <img src="images/hoodie-back.jpeg" alt="Capital Pitbull Hoodie Back">
+                <div class="product-info">
+                    <span class="tag">BESTSELLER</span>
+                    <h3>CAPITAL SIGNATURE HOODIE</h3>
+                    <p>Unisex Heavyweight Hoodie | Black</p>
+                    <p class="price">R 450.00</p>
+                </div>
+            </div>
+
+            <!-- 6. WOMENS JACARANDA CREWNECK -->
+            <div class="gallery-item">
+                <img src="images/jacaranda-crewneck.jpeg" alt="Womens Jacaranda Crewneck">
+                <div class="product-info">
+                    <span class="tag">LIMITED</span>
+                    <h3>JACARANDA CREWNECK</h3>
+                    <p>Women's Oversized Back Print Crewneck | White</p>
+                    <p class="price">R 450.00</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 through 2026 THE CAPITAL APPAREL now.gg, All Rights Reserved worldwide.</p>
+    </footer>
+</body>
+</html>
