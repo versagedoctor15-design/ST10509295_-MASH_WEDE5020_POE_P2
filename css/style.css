@@ -1,0 +1,32 @@
+/* WEDE5020 Part 2 - THE CAPITAL APPAREL */
+* { margin:0; padding:0; box-sizing:border-box; } /* 2.2 Reset */
+:root { 
+  --black:#0a0a0a; --white:#fff; --gold:#C5A880; 
+  --font-main:'Montserrat',sans-serif; 
+  --font-heading:'Oswald',sans-serif; 
+}
+html { font-size:16px; } /* base for rem */
+body { font-family:var(--font-main); font-size:1rem; line-height:1.6; }
+
+h1,h2,h3 { font-family:var(--font-heading); font-weight:700; 
+  line-height:1.2; letter-spacing:0.05em; text-transform:uppercase; }
+h1 { font-size:3rem; margin-bottom:1.5em; }
+
+header { display:flex; justify-content:space-between; 
+  align-items:center; padding:1.5rem 5%; background:var(--black); }
+nav { display:flex; gap:2rem; }
+.gallery-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; }
+
+.gallery-item:hover { transform:translateY(-8px); 
+  box-shadow:0 15px 30px rgba(0,0,0,0.15); }
+nav a:hover, nav a:focus { color:var(--gold); }
+
+@media screen and (max-width:1023px){ 
+  .gallery-grid{ grid-template-columns:repeat(2,1fr); } /* Tablet */
+}
+@media screen and (max-width:767px){ 
+  html{font-size:14px;} 
+  header{flex-direction:column;} 
+  .gallery-grid{grid-template-columns:1fr;} /* Mobile single col */
+  .container{width:95%; padding:1em 0;} 
+}
